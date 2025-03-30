@@ -29,3 +29,6 @@ test("should return the number itself when a single number is passed", () => {
     expect(add("//[##]\n4##5##6")).toBe(15);
   });
   
+  test("should handle mixed positive and negative numbers", () => {
+    expect(() => add("1,-2,3,-4")).toThrowError("negative numbers not allowed: -2,-4");
+});
